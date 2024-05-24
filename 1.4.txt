@@ -1,0 +1,29 @@
+tony@eines:~$ docker run -it ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+Input website:
+helsinki.fi
+Searching..
+sh: 1: curl: not found
+
+
+tony@eines:~$ docker container ls -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                        PORTS     NAMES
+ea9d8811a09f   ubuntu    "sh -c 'while true; …"   16 seconds ago       Up 15 seconds
+ peaceful_feynman
+
+
+tony@eines:~$ docker exec -it ea9d8811a09f bash
+root@ea9d8811a09f:/# apt install curl
+
+
+
+
+Input website:
+helsinki.fi
+Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.22.1</center>
+</body>
+</html>
