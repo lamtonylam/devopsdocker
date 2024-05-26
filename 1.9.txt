@@ -1,0 +1,10 @@
+tony@eines:~/dockeropen$ touch text.log
+
+tony@eines:~/dockeropen$ docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+Starting log output
+Wrote text to /usr/src/app/text.log
+
+tony@eines:~/dockeropen$ nano text.log
+  GNU nano 4.8                                   text.log                                              
+2024-05-26 14:36:09 +0000 UTC
+2024-05-26 14:36:11 +0000 UTC
