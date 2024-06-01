@@ -1,0 +1,1 @@
+tony@eines:~/dockeropen/material-applications/material-applications/scaling-exercise$ docker compose up --scale compute=3
