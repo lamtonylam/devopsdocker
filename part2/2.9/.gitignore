@@ -1,0 +1,15 @@
+# /**
+#  * This .gitignore file is located at the specified FILEPATH.
+#  * It is used to specify patterns for files and directories that should be ignored by Git.
+#  * The patterns in this file are used to exclude all files and directories that start with "example-",
+#  * except for the "Dockerfile" file inside each "example-" directory.
+#  */
+example-*/*
+
+# /**
+#  * This pattern excludes all files and directories that start with "example-".
+#  * The asterisk (*) is a wildcard that matches any characters.
+#  * The double asterisk (**) is a wildcard that matches any number of directories.
+#  * The forward slash (/) is used to separate directories in the pattern.
+#  */
+!example-*/Dockerfile
