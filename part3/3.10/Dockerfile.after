@@ -1,0 +1,30 @@
+# build stage
+FROM node:16-alpine as build
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+
+# serving stage
+FROM node:16-alpine as serve
+
+WORKDIR /app
+
+# copy from build stage to serve stage
+COPY --from=build /app /app
+
+# create the appuser
+RUN adduser -D appuser
+
+# change the owner of current dir to appuser
+RUN chown appuser .
+
+# now we can change the user
+USER appuser
+
+CMD ["node", "index.js"]
