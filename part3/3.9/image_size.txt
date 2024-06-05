@@ -1,0 +1,3 @@
+tony@eines:~/dockeropen/devopsdocker/part3/3.9/example-backend$ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED              SIZE
+3.9          latest    de07af55cc00   About a minute ago   19.2MB
